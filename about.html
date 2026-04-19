@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Kiran Suthar</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="logo.jpg">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 antialiased overflow-x-hidden transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-lg py-4 px-6 md:px-12 fixed w-full z-50 top-0 transition-colors duration-300">
+    <nav class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+        <a class='text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors duration-300 mb-2 md:mb-0' href='/'>
+        <img src="logo.png" alt="KS Logo" width="100">
+        </a>
+        <ul class="flex items-center space-x-2 md:space-x-8">
+        <li><a class='text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium' href='/'>Home</a></li>
+        <li><a class='text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium border-b-2 border-blue-600 dark:border-blue-400' href='/about.html'>About</a></li>
+        <li><a class='text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium' href='/projects.html'>Projects</a></li>
+        <li><a class='text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium' href='/certifications.html'>Certifications</a></li>
+        <li><a class='text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium' href='/contact.html'>Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none">
+              <i id="theme-toggle-dark-icon" data-lucide="moon" class="hidden w-5 h-5"></i>
+              <i id="theme-toggle-light-icon" data-lucide="sun" class="hidden w-5 h-5"></i>
+          </button>
+        </li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="pt-28"></div>
+
+    <div class="fixed top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob z-0"></div>
+    <div class="fixed top-20 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000 z-0"></div>
+
+    <main class="relative z-10 px-6 md:px-12 max-w-5xl mx-auto">
+        
+        <section id="about" class="mb-20">
+            <h2 class="text-4xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12 flex items-center justify-center">
+                <i data-lucide="user" class="w-9 h-9 mr-3"></i> Professional Bio
+            </h2>
+            <div class="glow-card bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-center gap-10 shadow-xl dark:shadow-2xl transition-colors duration-300">
+                <div class="flex-shrink-0">
+                    <img src="kps.jpg" alt="Kiran Suthar" class="w-52 h-52 object-cover rounded-2xl border-4 border-gray-200 dark:border-gray-700 shadow-2xl transition-colors duration-300">
+                </div>
+                <div class="flex-grow text-center md:text-left">
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Kiran Suthar</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium mb-4">MERN Stack Developer & Competitive Programmer</p>
+                    
+                    <div class="text-lg leading-relaxed text-gray-700 dark:text-gray-400">
+                        <p id="bio-short">
+                            Hello! I'm Kiran Suthar, a passionate web developer who loves creating user-friendly digital experiences....
+                        </p>
+                        <p id="bio-more" class="hidden mt-4">
+                             I’m a passionate Web Developer dedicated to crafting high-end, user-centric digital experiences. My expertise lies in front-end development, where I specialize in transforming complex requirements into clean, intuitive, and visually striking interfaces. Using technologies like HTML, CSS, JavaScript, and React, I focus on building modern web applications that prioritize both performance and aesthetic precision. I thrive on problem-solving and am constantly exploring emerging tech trends to stay at the forefront of modern design.
+                        </p>
+                        <button id="see-more-btn" class="text-blue-600 dark:text-blue-400 hover:text-blue-500 font-bold mt-2 transition-colors">
+                            See More...
+                        </button>
+                    </div>
+                        
+                    <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="/resume_1ef1db24-ae61-40b0-8a2b-a739d5973aa4.pdf" class="flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg transition-all">
+                            <i data-lucide="Resume" class="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400"></i> Resume
+                        </a>
+                    <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profiles" class="mb-20">
+            <h2 class="text-4xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12 flex items-center justify-center">
+                <i data-lucide="share-2" class="w-9 h-9 mr-3"></i> Presence & Profiles
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://linkedin.com/in/kiran-p-suthar-8714a4297/" target="_blank" class="glow-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 text-center hover:scale-105 transition-transform shadow-lg">
+                    <i data-lucide="linkedin" class="w-10 h-10 mx-auto mb-4 text-[#0A66C2]"></i>
+                    <h4 class="font-bold text-gray-900 dark:text-white">LinkedIn</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-500 mt-1">Professional Network</p>
+                </a>
+                <a href="https://github.com/Kpsuthar/" target="_blank" class="glow-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 text-center hover:scale-105 transition-transform shadow-lg">
+                    <i data-lucide="github" class="w-10 h-10 mx-auto mb-4 text-gray-900 dark:text-white wobble-icon"></i>
+                    <h4 class="font-bold text-gray-900 dark:text-white">GitHub</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-500 mt-1">Code Repositories</p>
+                </a>
+                <a href="https://www.instagram.com/k._suthar9" target="_blank" class="glow-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 text-center transition-all duration-300 shadow-lg">
+                  <i data-lucide="instagram" class="w-10 h-10 mx-auto mb-4 instagram-icon wobble-icon"></i>
+                  <h4 class="font-bold text-gray-900 dark:text-white">Instagram</h4>
+              <p class="text-xs text-gray-600 dark:text-gray-500 mt-1">Follow for updates</p>
+</a>
+                    
+                    
+                
+                <a href="mailto:kiransuthar9605@gmail.com" class="glow-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 text-center hover:scale-105 transition-transform shadow-lg">
+                    <i data-lucide="" class="w-10 h-10 mx-auto mb-4 text-red-500 dark:text-red-400"></i>
+                    <h4 class="font-bold text-gray-900 dark:text-white">Email</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-500 mt-1">Direct Contact</p>
+                </a>
+                    </div>
+            </div>
+        </section>
+
+<section id="skills" class="mb-20">
+    <h2 class="text-4xl font-bold text-center text-blue-400 mb-12 flex items-center justify-center">
+        <i data-lucide="rocket" class="w-9 h-9 mr-3"></i> Core Expertise
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="glow-card bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-colors">
+            <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i data-lucide="layout" class="w-6 h-6 mr-3 text-blue-400"></i> Frontend & UI/UX
+            </h4>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5 mr-2" /> HTML5
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-5 h-5 mr-2" /> CSS3
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5 mr-2" /> JavaScript
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5 mr-2" /> React
+                </span>
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="pen-tool" class="w-5 h-5 mr-2 text-pink-400"></i> UI/UX Design
+                </span>
+            </div>
+        </div>
+
+        <div class="glow-card bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-colors">
+            <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i data-lucide="database" class="w-6 h-6 mr-3 text-green-400"></i> Backend & Database
+            </h4>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-5 h-5 mr-2" /> Node.js
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-5 h-5 mr-2 invert" /> Express
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-5 h-5 mr-2" /> Firebase
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="database" class="w-5 h-5 mr-2 text-blue-300"></i> SQL
+                </span>
+            </div>
+        </div>
+
+        <div class="glow-card bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-colors">
+            <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i data-lucide="terminal" class="w-6 h-6 mr-3 text-purple-400"></i> Programming & Hardware
+            </h4>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5 mr-2" /> C++
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="braces" class="w-5 h-5 mr-2 text-yellow-400"></i> OOP
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="network" class="w-5 h-5 mr-2 text-cyan-400"></i> Data Structures
+                </span>
+                </span>
+            </div>
+        </div>
+
+        <div class="glow-card bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-colors">
+            <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i data-lucide="wrench" class="w-6 h-6 mr-3 text-pink-400"></i> Tools & Soft Skills
+            </h4>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-5 h-5 mr-2" /> Git
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5 mr-2 invert" /> GitHub
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="w-5 h-5 mr-2" /> VS Code
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg" class="w-5 h-5 mr-2" /> Netlify
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="file-spreadsheet" class="w-5 h-5 mr-2 text-green-500"></i> MS Excel
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="presentation" class="w-5 h-5 mr-2 text-orange-500"></i> MS PowerPoint
+                </span>
+                <span class="bg-gray-700/50 px-4 py-2 rounded-lg border border-gray-600 flex items-center text-sm text-gray-200">
+                    <i data-lucide="users" class="w-5 h-5 mr-2 text-blue-400"></i> Team Building
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <section id="education" class="mb-20">
+            <h2 class="text-4xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12 flex items-center justify-center">
+                <i data-lucide="graduation-cap" class="w-9 h-9 mr-3"></i> Education
+            </h2>
+            
+            <div class="space-y-8">
+                <div class="glow-card bg-white dark:bg-gray-800 p-6 rounded-2xl border-l-4 border-l-blue-500 border-y border-r border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-center gap-6 shadow-xl transition-colors duration-300">
+                    <div class="flex-shrink-0 bg-white p-2 rounded-xl border border-gray-200 dark:border-none">
+                        <img src="cjp.png" alt="Dhaka University Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white uppercase">BCA Bachelore of Computer Application</h4>
+                                <p class="text-blue-600 dark:text-blue-400 font-medium">C.J.Patel College of Computer Studies</p>
+                                <p class="text-gray-600 dark:text-gray-500 text-sm">Sankalchand Patel University, Visnagar</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 px-4 py-1 rounded-full text-xs font-bold border border-blue-200 dark:border-blue-800">2022 - 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glow-card bg-white dark:bg-gray-800 p-6 rounded-2xl border-l-4 border-l-purple-500 border-y border-r border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-center gap-6 shadow-xl transition-colors duration-300">
+                    <div class="flex-shrink-0 bg-white p-2 rounded-xl border border-gray-200 dark:border-none">
+                        <img src="favicon.png" alt="College Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white uppercase">Higher Secondary Certificate (HSC)</h4>
+                                <p class="text-purple-600 dark:text-purple-400 font-medium">Shah S.D Highschool, Kukarvada</p>
+                                <p class="text-gray-600 dark:text-gray-500 text-sm italic">Commerce</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 px-4 py-1 rounded-full text-xs font-bold border border-purple-200 dark:border-purple-800">2021 - 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer class="bg-gray-200 dark:bg-gray-800 py-10 text-center text-gray-600 dark:text-gray-500 border-t border-gray-300 dark:border-gray-700 transition-colors duration-300">
+        <p>&copy; <span id="current-year"></span> Kiran Suthar </p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
